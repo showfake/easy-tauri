@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "云影影视",
+  "productName": "easy-tauri",
   "version": "0.1.0",
   "identifier": "com.easy.movie",
   "build": {
