@@ -1,5 +1,7 @@
 # Nuxt Minimal Starter
 
+该项目作为一个脚手架可以下载就可以开发，免去搭建环境，配置项目的各种问题，专注开发业务
+
 Nuxt3 + vant4 + Tauri + pnpm + Tailwind CSS + Vue3 + TypeScript
 相关文档地址
 
