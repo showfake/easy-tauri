@@ -4,6 +4,21 @@ import process from 'node:process'
 const isMobile = !!/android|ios/.exec(process.env.TAURI_ENV_PLATFORM || '')
 const host = process.env.NUXT_HMR_HOST || process.env.TAURI_DEV_HOST || undefined
 export default defineNuxtConfig({
+    app: {
+        head: {
+            meta: [
+                //name: 'viewport'：指定视口设置，影响页面在移动设备上的缩放和布局。
+                // content 里的参数：
+                // width=device-width：宽度等于设备宽度。
+                // initial-scale=1.0：初始缩放比例为 1。
+                // maximum-scale=1.0：最大缩放比例为 1，禁止用户放大。
+                // user-scalable=no：禁止用户手动缩放页面。
+                // viewport-fit=cover：适配全面屏，内容延伸到安全区域。
+                // 让页面在移动端更像原生 App，防止用户缩放和页面错位。
+                {name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover'}
+            ]
+        }
+    },
     modules: ['@vant/nuxt', '@nuxtjs/tailwindcss'],
     css: ['@/assets/vant-theme.css', '@/assets/base.css'],
     compatibilityDate: '2025-05-15',
