@@ -5,7 +5,7 @@ const isMobile = !!/android|ios/.exec(process.env.TAURI_ENV_PLATFORM || '')
 const host = process.env.NUXT_HMR_HOST || process.env.TAURI_DEV_HOST || undefined
 export default defineNuxtConfig({
     modules: ['@vant/nuxt', '@nuxtjs/tailwindcss'],
-    css: ['@/assets/vant-theme.css'],
+    css: ['@/assets/vant-theme.css', '@/assets/base.css'],
     compatibilityDate: '2025-05-15',
     // （可选） 启用 Nuxt 调试工具
     devtools: {enabled: false},
